@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Detection Results</title>
+</head>
+<body>
+    <h1>🎥 Live Detection Results</h1>
+
+    <p><strong>Total Vehicles Detected:</strong> {{ total }}</p>
+    <ul>
+        <li>Car: {{ counts.car }}</li>
+        <li>Motorcycle: {{ counts.motorcycle }}</li>
+        <li>Bus: {{ counts.bus }}</li>
+        <li>Truck: {{ counts.truck }}</li>
+    </ul>
+
+    <p><strong>Predicted Traffic Level:</strong> {{ prediction }}</p>
+    <p><strong>Risk Level:</strong> {{ risk }}</p>
+
+    <a href="/">⬅️ Back to Home</a>
+</body>
+</html>

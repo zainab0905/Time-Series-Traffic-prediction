@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Analysis</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;           
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('/static/09.jpg'); 
+            background-position: center;   
+            background-size: cover;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1); /* transparent white */
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-align: center;
+            backdrop-filter: blur(5px); /* glass effect */
+        }
+        .container h2, 
+        .container p {
+            color: whitesmoke;
+            margin: 10px 0;
+        }
+        .container a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #007bff;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .container a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Traffic Congestion Level</h2>
+        <p>Total Vehicles Detected: <strong>{{ total }}</strong></p>
+        <p>Traffic Level: <strong>{{ level }}</strong></p>
+        <p><b>Recommended Vehicles:</b> {{ recommendation }}</p>
+        <a href="/">Go Home</a>
+    </div>
+</body>
+</html>

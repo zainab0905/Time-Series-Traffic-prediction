@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Results</title>
+    <style>
+        table { width: 100%; margin-bottom: 30px; border-collapse: collapse; }
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: center; }
+        th { background-color: #333; color: white; }
+        .high { background-color: #ffcccc; }
+        .medium { background-color: #fff0b3; }
+        .low { background-color: #ccffcc; }
+    </style>
+</head>
+<body>
+    <h2>High Traffic</h2>
+    {{ high_rows | safe }}
+
+    <h2>Medium Traffic</h2>
+    {{ medium_rows | safe }}
+
+    <h2>Low Traffic</h2>
+    {{ low_rows | safe }}
+
+    <a href="{{ csv_path }}" download>Download Processed CSV</a>
+</body>
+</html>

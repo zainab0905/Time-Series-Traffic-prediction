@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Management</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start;     
+            height: 100vh;           
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)),url('/static/90.jpg'); 
+            background-position: absolute;   
+            background-size: cover;
+        }
+
+        form {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1{
+            color: whitesmoke;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analyzing Traffic Congestion Level</h1>
+    <h1>Upload Video</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="video" accept="video/*" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <h1>Live Detection</h1>
+    <form action="/live">
+        <button type="submit">Start Live</button>
+    </form>
+
+    <h1>Upload Traffic Dataset (CSV)</h1>
+    <form method="POST" action="/upload_csv" enctype="multipart/form-data">
+        <input type="file" name="csvfile" accept=".csv" required>
+        <button type="submit">Upload CSV</button>
+    </form>
+</body>
+</html>

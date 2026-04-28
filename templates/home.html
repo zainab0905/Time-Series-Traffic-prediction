@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepTraffic-VTS</title>
+</head>
+<body>
+    <h1>🚦 DeepTraffic-VTS</h1>
+
+    <h2>Upload Traffic Dataset (CSV)</h2>
+    <form method="POST" action="/upload_csv" enctype="multipart/form-data">
+        <input type="file" name="csvfile" accept=".csv" required>
+        <button type="submit">Upload CSV</button>
+    </form>
+
+    <h2>Upload Traffic Video</h2>
+    <form method="POST" action="/upload_video" enctype="multipart/form-data">
+        <input type="file" name="videofile" accept=".mp4" required>
+        <button type="submit">Upload Video</button>
+    </form>
+
+    <h2>Live Traffic Detection</h2>
+    <form action="/live">
+        <button type="submit">Start Live Detection</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Result</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;  
+            justify-content: center; 
+            align-items: center;     
+            height: 100vh;           
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 90%;      /* responsive container */
+            max-height: 80vh;    /* keep it inside viewport */
+            overflow: hidden;
+        }
+
+        .video-container img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;   /* prevent overflow */
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Uploaded Video Detection</h2>
+    <div class="video-container">
+        <img src="{{ url_for('video_feed') }}">
+    </div>
+
+    <form action="/analyze_video">
+        <button type="submit">Analyze Traffic</button>
+    </form>
+</body>
+</html>

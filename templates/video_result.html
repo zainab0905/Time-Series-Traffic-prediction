@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Results</title>
+</head>
+<style>
+     body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-start; 
+            align-items: flex-start;     
+            height: 100vh;           
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('/static/09.jpg'); 
+            background-position: absolute;   
+            background-size: cover;
+        }
+
+</style>
+<body>
+    <h1>📹 Video Analysis Results</h1>
+
+    <p><strong>Total Vehicles Detected:</strong> {{ total }}</p>
+    <ul>
+        <li>Car: {{ counts.car }}</li>
+        <li>Motorcycle: {{ counts.motorcycle }}</li>
+        <li>Bus: {{ counts.bus }}</li>
+        <li>Truck: {{ counts.truck }}</li>
+    </ul>
+
+    <p><strong>Predicted Traffic Level:</strong> {{ prediction }}</p>
+    <p><strong>Risk Level:</strong> {{ risk }}</p>
+
+    <a href="/">⬅️ Back to Home</a>
+</body>
+</html>
